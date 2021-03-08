@@ -5,6 +5,8 @@ var Phaser;
 var score = 0;
 var scoreText;
 var platforms;
+var shootTime = 0;
+var lasers;
 
 first.state0 = function(){};
 first.state0.prototype = {
@@ -17,6 +19,7 @@ first.state0.prototype = {
         game.load.image('yellow', 'y_platform.png');
         game.load.image('end', 'black.png');
         game.load.spritesheet('boss', 'boss2.png', 300, 180);
+        game.load.image('laser', 'laser.png');
     },
     create: function(){
         game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -63,7 +66,16 @@ first.state0.prototype = {
         star.checkWorldBounds = true;
         star.body.immovable = true;
         
-        
+        lasers = game.add.group();
+        lasers.enableBody = true;
+        lasers.physicsBodyType = Phaser.Physics.ARCADE;
+        lasers.createMultiple(5, 'laser');
+        lasers.setAll('anchor.x', 0.5);
+        lasers.setAll('anchor.y', 0.5);
+        lasers.setAll('scale.x', 0.2);
+        lasers.setAll('scale.y', 0.2);
+        lasers.setAll('outOfBoundKill', true);
+        lasers.setAll('checkWorldBounds', true);
         
         
         
@@ -120,9 +132,23 @@ first.state0.prototype = {
             sonic.y += speed; 
             sonic.animations.play('walk', 18, 'true');
         }
+        if(game.input.keyboard.isDown(Phaser.KeyCode.SPACEBAR)){
+        shootLaser();
+        }
+        
         
     }
 };
+
+function shootLaser(){
+    
+    laser = lasers.getFirstExists(false);
+    if(laser){
+        laser.reset(player.x,player.y);
+        laser.body.velocity.x = 600;
+    }
+    
+}
 
 function collectStar(sonic, star) {
     star.kill();
