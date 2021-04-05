@@ -1,0 +1,20 @@
+{
+    "assets": {
+        "map_tiles": { "type": "image", "source": "assets/images/tiles_spritesheet.png" },
+        "background": { "type": "image", "source": "assets/images/background.png"},
+        "player_spritesheet": { "type": "spritesheet", "source": "assets/images/player_spritesheet.png", "frame_width": 20, "frame_height": 20, "frames": 35},
+        "vampire_spritesheet": { "type": "spritesheet", "source": "assets/images/vampire_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 56},
+        "robots_spritesheet": { "type": "spritesheet", "source": "assets/images/robots_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 72 },
+        "goal_image": { "type": "image", "source": "assets/images/goal.png" },
+        "level_tilemap": { "type": "tilemap", "source": "assets/maps/level1_map.json" }
+    },
+    "groups": [
+        "enemies",
+        "goals",
+        "players"
+    ],
+    "map": {
+        "key": "level_tilemap",
+        "tileset": ["map_tiles"]
+    }
+}
