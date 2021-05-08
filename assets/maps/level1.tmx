@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="2021.02.15" orientation="orthogonal" renderorder="right-down" width="60" height="16" tilewidth="32" tileheight="32" infinite="0" nextlayerid="23" nextobjectid="67">
+<map version="1.5" tiledversion="2021.02.15" orientation="orthogonal" renderorder="right-down" width="60" height="16" tilewidth="32" tileheight="32" infinite="0" nextlayerid="23" nextobjectid="81">
  <editorsettings>
   <export target="level1_map.json" format="json1"/>
  </editorsettings>
@@ -1941,92 +1941,167 @@
   </data>
  </layer>
  <objectgroup id="6" name="objects">
+  <object id="59" name="goal" type="goal" x="1790.44" y="221.141" width="35" height="35">
+   <properties>
+    <property name="group" value="goals"/>
+    <property name="next_level" value="assets/levels/level1.json"/>
+    <property name="texture" value="goal_image"/>
+   </properties>
+  </object>
   <object id="56" name="player" type="player" x="30.2281" y="318.506" width="35" height="35">
    <properties>
     <property name="bouncing" value="20"/>
     <property name="group" value="players"/>
-    <property name="jumping_speed" value="500"/>
+    <property name="jumping_speed" value="450"/>
     <property name="texture" value="player_spritesheet"/>
     <property name="walking_speed" value="200"/>
    </properties>
   </object>
   <object id="57" name="enemy0" type="ground_enemy" x="637.33" y="350.961" width="35" height="35">
    <properties>
-    <property name="direction" value="1"/>
+    <property name="direction" value="-1"/>
     <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
     <property name="texture" value="vampire_spritesheet"/>
     <property name="walking_distance" value="100"/>
     <property name="walking_speed" value="50"/>
    </properties>
   </object>
-  <object id="58" name="enemy1" type="flying_enemy" x="158.14" y="156.23" width="35" height="35">
+  <object id="60" name="enemy1" type="ground_enemy" x="314.688" y="282.233" width="35" height="35">
    <properties>
     <property name="direction" value="-1"/>
     <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
+    <property name="texture" value="vampire_spritesheet"/>
+    <property name="walking_distance" value="80"/>
+    <property name="walking_speed" value="50"/>
+   </properties>
+  </object>
+  <object id="64" name="enemy2" type="ground_enemy" x="1309.34" y="253.596" width="35" height="35">
+   <properties>
+    <property name="direction" value="-1"/>
+    <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
+    <property name="texture" value="vampire_spritesheet"/>
+    <property name="walking_distance" value="80"/>
+    <property name="walking_speed" value="50"/>
+   </properties>
+  </object>
+  <object id="65" name="enemy3" type="ground_enemy" x="1694.99" y="219.232" width="35" height="35">
+   <properties>
+    <property name="direction" value="-1"/>
+    <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
+    <property name="texture" value="vampire_spritesheet"/>
+    <property name="walking_distance" value="80"/>
+    <property name="walking_speed" value="50"/>
+   </properties>
+  </object>
+  <object id="66" name="enemy4" type="ground_enemy" x="1630.08" y="412.054" width="35" height="35">
+   <properties>
+    <property name="direction" value="-1"/>
+    <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
+    <property name="texture" value="vampire_spritesheet"/>
+    <property name="walking_distance" value="80"/>
+    <property name="walking_speed" value="50"/>
+   </properties>
+  </object>
+  <object id="58" name="flying_enemy0" type="flying_enemy" x="158.14" y="156.23" width="35" height="35">
+   <properties>
+    <property name="direction" value="-1"/>
+    <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
     <property name="texture" value="robots_spritesheet"/>
     <property name="walking_distance" value="200"/>
     <property name="walking_speed" value="75"/>
    </properties>
   </object>
-  <object id="60" name="enemy2" type="ground_enemy" x="381.507" y="188.686" width="35" height="35">
+  <object id="62" name="flying_enemy1" type="flying_enemy" x="992.427" y="156.231" width="35" height="35">
    <properties>
     <property name="direction" value="-1"/>
     <property name="group" value="enemies"/>
-    <property name="texture" value="vampire_spritesheet"/>
-    <property name="walking_distance" value="80"/>
-    <property name="walking_speed" value="50"/>
-   </properties>
-  </object>
-  <object id="62" name="enemy3" type="flying_enemy" x="992.427" y="156.231" width="35" height="35">
-   <properties>
-    <property name="direction" value="-1"/>
-    <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
     <property name="texture" value="robots_spritesheet"/>
     <property name="walking_distance" value="200"/>
     <property name="walking_speed" value="75"/>
    </properties>
   </object>
-  <object id="63" name="enemy4" type="flying_enemy" x="606.784" y="156.23" width="35" height="35">
+  <object id="63" name="flying_enemy2" type="flying_enemy" x="606.784" y="156.23" width="35" height="35">
    <properties>
     <property name="direction" value="-1"/>
     <property name="group" value="enemies"/>
+    <property name="score" value="150"/>
     <property name="texture" value="robots_spritesheet"/>
     <property name="walking_distance" value="200"/>
     <property name="walking_speed" value="75"/>
    </properties>
   </object>
-  <object id="64" name="enemy5" type="ground_enemy" x="1309.34" y="253.596" width="35" height="35">
+  <object id="77" name="checkpoint" type="checkpoint" x="511.326" y="347.143" width="35" height="35">
    <properties>
+    <property name="group" value="checkpoints"/>
+    <property name="texture" value="checkpoint_image"/>
+   </properties>
+  </object>
+  <object id="75" name="running_enemy0" type="running_enemy" x="1630.08" y="253.597" width="35" height="35">
+   <properties>
+    <property name="detection_distance" value="300"/>
     <property name="direction" value="-1"/>
     <property name="group" value="enemies"/>
+    <property name="running_speed" value="200"/>
+    <property name="score" value="200"/>
     <property name="texture" value="vampire_spritesheet"/>
-    <property name="walking_distance" value="80"/>
+    <property name="walking_distance" value="100"/>
     <property name="walking_speed" value="50"/>
    </properties>
   </object>
-  <object id="65" name="enemy6" type="ground_enemy" x="1694.99" y="219.232" width="35" height="35">
+  <object id="67" name="coin0" type="coin" x="186.686" y="311.779" width="39" height="37">
    <properties>
-    <property name="direction" value="-1"/>
-    <property name="group" value="enemies"/>
-    <property name="texture" value="vampire_spritesheet"/>
-    <property name="walking_distance" value="80"/>
-    <property name="walking_speed" value="50"/>
+    <property name="group" value="coins"/>
+    <property name="score" value="50"/>
+    <property name="texture" value="coin_image"/>
    </properties>
   </object>
-  <object id="66" name="enemy7" type="ground_enemy" x="1630.08" y="412.054" width="35" height="35">
+  <object id="68" name="coin1" type="coin" x="379.507" y="153.321" width="39" height="37">
    <properties>
-    <property name="direction" value="-1"/>
-    <property name="group" value="enemies"/>
-    <property name="texture" value="vampire_spritesheet"/>
-    <property name="walking_distance" value="80"/>
-    <property name="walking_speed" value="50"/>
+    <property name="group" value="coins"/>
+    <property name="score" value="50"/>
+    <property name="texture" value="coin_image"/>
    </properties>
   </object>
-  <object id="59" name="goal" type="goal" x="1790.44" y="221.141" width="35" height="35">
+  <object id="69" name="coin2" type="coin" x="956.063" y="344.234" width="39" height="37">
    <properties>
-    <property name="group" value="goals"/>
-    <property name="next_level" value="assets/levels/level1.json"/>
-    <property name="texture" value="goal_image"/>
+    <property name="group" value="coins"/>
+    <property name="score" value="50"/>
+    <property name="texture" value="coin_image"/>
+   </properties>
+  </object>
+  <object id="70" name="coin3" type="coin" x="778.515" y="183.867" width="39" height="37">
+   <properties>
+    <property name="group" value="coins"/>
+    <property name="score" value="50"/>
+    <property name="texture" value="coin_image"/>
+   </properties>
+  </object>
+  <object id="71" name="coin4" type="coin" x="1151.2" y="311.279" width="42" height="38">
+   <properties>
+    <property name="group" value="coins"/>
+    <property name="score" value="50"/>
+    <property name="texture" value="coin_image"/>
+   </properties>
+  </object>
+  <object id="79" name="life_item0" type="life_item" x="486.418" y="149.503" width="39" height="37">
+   <properties>
+    <property name="" value=""/>
+    <property name="group" value="items"/>
+    <property name="texture" value="life_item_image"/>
+   </properties>
+  </object>
+  <object id="80" name="fireball_item0" type="fireball_item" x="877.789" y="151.412" width="39" height="37">
+   <properties>
+    <property name="" value=""/>
+    <property name="group" value="items"/>
+    <property name="texture" value="fireball_item_image"/>
    </properties>
   </object>
  </objectgroup>
