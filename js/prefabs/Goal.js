@@ -23,5 +23,7 @@ Platformer.Goal.prototype.update = function () {
 Platformer.Goal.prototype.reach_goal = function () {
     "use strict";
     // start the next level
+    localStorage.player_lives = this.game_state.prefabs.player.lives;
+    localStorage.player_score = this.game_state.prefabs.player.score;
     this.game_state.game.state.start("BootState", true, false, this.next_level);
 };
