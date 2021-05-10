@@ -11,6 +11,7 @@
         "fireball_item_image": { "type": "image", "source": "assets/images/fireball.png" },
         "fireball_image": { "type": "image", "source": "assets/images/fireball.png" },
         "life_item_image": { "type": "image", "source": "assets/images/life_item.png" },
+        "gameover": { "type": "image", "source": "assets/images/youlost.png" },
         
         "level_tilemap": { "type": "tilemap", "source": "assets/maps/level1_map.json" }
     },
