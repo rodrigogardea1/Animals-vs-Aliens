@@ -1,0 +1,31 @@
+{
+    "assets": {
+        "map_tiles": { "type": "image", "source": "assets/images/tiles_spritesheet.png" },
+        "background2": { "type": "image", "source": "assets/images/background2.png"},
+        "player2_spritesheet": { "type": "spritesheet", "source": "assets/images/player2_spritesheet.png", "frame_width": 20, "frame_height": 20, "frames": 35},
+        "vampire_spritesheet": { "type": "spritesheet", "source": "assets/images/vampire_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 56},
+        "robots_spritesheet": { "type": "spritesheet", "source": "assets/images/robots_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 72 },
+        "goal_image": { "type": "image", "source": "assets/images/goal.png" },
+        "checkpoint_image": { "type": "image", "source": "assets/images/checkpoint.png" },
+        "coin_image": { "type": "image", "source": "assets/images/coin.png" },
+        "fireball_item_image": { "type": "image", "source": "assets/images/fireball.png" },
+        "fireball_image": { "type": "image", "source": "assets/images/fireball.png" },
+        "life_item_image": { "type": "image", "source": "assets/images/life_item.png" },
+        
+        "level_tilemap": { "type": "tilemap", "source": "assets/maps/level2_map.json" }
+    },
+    "groups": [
+        "goals",
+        "checkpoints",
+        "coins",
+        "fireballs",
+        "enemies",
+        "players",
+        "items",
+        "hud"
+    ],
+    "map": {
+        "key": "level_tilemap",
+        "tilesets": ["map_tiles"]
+    }
+}
