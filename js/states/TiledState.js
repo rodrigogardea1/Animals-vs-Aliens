@@ -118,7 +118,7 @@ Platformer.TiledState.prototype.restart_level = function () {
 Platformer.TiledState.prototype.game_over = function () {
     "use strict";
     localStorage.clear();
-    this.game.state.start("BootState", true, false, "assets/levels/level1.json");
+    this.game.state.start("state1", true, false, "assets/levels/level1.json");
 };
 
 Platformer.TiledState.prototype.init_hud = function () {

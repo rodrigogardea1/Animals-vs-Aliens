@@ -8,24 +8,24 @@ var music;
 var play_button;
 var star_bg;
 var logo;
-
+var game;
 var stars;
 var score = 0;
 var scoreText;
 
 demo.state0 = function(){};
 demo.state0.prototype = {
-    preload: function(){
-        game.load.audio('music', 'assets/space.mp3');
-        game.load.image('sky', 'assets/background.png', 800, 600);
-        game.load.image('logo', 'assets/log2.png', 10, 10);
-        game.load.image('ground', 'assets/platform.png');
-        game.load.image('orange', 'assets/o_platform.png');
-        game.load.image('red', 'assets/r_platform.png');
-        game.load.image('yellow', 'assets/y_platform.png');
-        game.load.image('star', 'assets/star.png');
-        game.load.spritesheet('dude', 'assets/kooo.png', 20, 20);
-        game.load.image('button1', 'assets/start1.png', 30, 10);
+    preload: function() {
+        game.load.image('sky', 'assets/images/background.png');
+        game.load.image('logo', 'assets/images/log2.png', 10, 10);
+        game.load.image('ground', 'assets/images/platform.png');
+        game.load.image('orange', 'assets/images/o_platform.png');
+        game.load.image('red', 'assets/images/r_platform.png');
+        game.load.image('yellow', 'assets/images/y_platform.png');
+        game.load.image('star', 'assets/images/star.png');
+        game.load.spritesheet('dude', 'assets/images/kooo.png', 20, 20);
+        game.load.image('button1', 'assets/images/start1.png', 30, 10);
+        game.load.bitmapFont('carrier_command', 'assets/images/carrier_command.png', 'assets/images/carrier_command.xml');
         console.log('state0');
         
         
@@ -34,17 +34,19 @@ demo.state0.prototype = {
     },
     create: function(){
         
-        music = game.add.audio('music');
-        music.loop = true;
-        music.play();
+        game.scale.setGameSize(800, 600);
+        
         // enable Arcarde Physics system to use physics
         game.physics.startSystem(Phaser.Physics.ARCADE);
         
         // simple background
         space_bg = game.add.tileSprite(0, 0, 800, 600, 'sky');
         
-        
-        
+        var objectiveLabel = stateText = game.add.text(535, 20, ' ', {font: '30px Arial', fill: '#F2F2F2'});
+        stateText.anchor.setTo(1.1, 0.2);
+        stateText.text = " Objective 1: Get the first diamond \n Objective 2: Get the second diamond \n Objective 3: Defeat the Mothership! ";
+        stateText.visible = true;
+
         play_button = game.add.button(game.world.centerX - 150, game.world.centerY + 50, 'button1', actionOnClick, this);
         logo = game.add.image(game.world.centerX - 250, game.world.centerY - 180, 'logo');
         
@@ -165,7 +167,7 @@ demo.state0.prototype = {
     
 };
 
-function collectStar(player, star){
+function collectStar(player, star) {
     star.kill();
     
     score += 10;
@@ -173,7 +175,7 @@ function collectStar(player, star){
     
 }
 
-function changeState(i, stateNum){
+function changeState(i, stateNum) {
     console.log(i);
     game.state.start('state' + stateNum);
 }
@@ -187,6 +189,6 @@ function addChangeStateEventListeners(){
     addKeyCallback(Phaser.Keyboard.ONE, changeState, 1);
 }
 
-function actionOnClick(){
-    game.state.start('state1');
+function actionOnClick() {
+    this.game.state.start("BootState", true, false, "assets/levels/level1.json");
 }

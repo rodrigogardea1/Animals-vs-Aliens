@@ -1,9 +1,11 @@
 var Phaser = Phaser || {};
 var Platformer = Platformer || {};
+var demo;
 
-var game = new Phaser.Game("100%", "100%", Phaser.CANVAS);
+var game = new Phaser.Game("100%", "100%", Phaser.AUTO);
 game.state.add("BootState", new Platformer.BootState());
 game.state.add("LoadingState", new Platformer.LoadingState());
-game.state.add("IntroState", new Platformer.IntroState());
+game.state.add('state0', new demo.state0());
 game.state.add("GameState", new Platformer.TiledState());
-game.state.start("BootState", true, false, "assets/levels/level1.json");
+game.state.add('state1', new demo.state1());
+game.state.start('state0');
