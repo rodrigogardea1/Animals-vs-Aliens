@@ -1,0 +1,23 @@
+{
+    "assets": {
+        "map_tiles": { "type": "image", "source": "assets/images/tiles_spritesheet.png" },
+        "background2": { "type": "image", "source": "assets/images/youwon.png"},
+        "level_tilemap": { "type": "tilemap", "source": "assets/maps/boss_level_map.json" }
+    },
+    "groups": [
+        "goals",
+        "checkpoints",
+        "coins",
+        "fireballs",
+        "enemy_fireballs",
+        "invincible_enemies",
+        "enemies",
+        "players",
+        "items",
+        "hud"
+    ],
+    "map": {
+        "key": "level_tilemap",
+        "tilesets": ["map_tiles"]
+    }
+}
