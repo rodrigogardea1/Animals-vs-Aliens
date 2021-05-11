@@ -2,7 +2,7 @@ var Phaser = Phaser || {};
 var Platformer = Platformer || {};
 var demo;
 
-var game = new Phaser.Game("100%", "100%", Phaser.AUTO);
+var game = new Phaser.Game("100%", "100%", Phaser.CANVAS);
 game.state.add("BootState", new Platformer.BootState());
 game.state.add("LoadingState", new Platformer.LoadingState());
 game.state.add('state0', new demo.state0());
