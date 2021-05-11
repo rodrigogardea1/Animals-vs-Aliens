@@ -42,9 +42,9 @@ demo.state0.prototype = {
         // simple background
         space_bg = game.add.tileSprite(0, 0, 800, 600, 'sky');
         
-        var objectiveLabel = stateText = game.add.text(535, 20, ' ', {font: '30px Arial', fill: '#F2F2F2'});
+        var objectiveLabel = stateText = game.add.text(575, 105, ' ', {font: '30px Arial', fill: '#F2F2F2'});
         stateText.anchor.setTo(1.1, 0.2);
-        stateText.text = " Objective 1: Get the first diamond \n Objective 2: Get the second diamond";
+        stateText.text = " Objective 1: Get the first crystal \n Objective 2: Get the second crystal \n \n \n \n \n \n \n  Controls: Use the keypad to move \n Use item with space bar \n \n \n Advance/Restart by clicking on image" ;
         stateText.visible = true;
 
         play_button = game.add.button(game.world.centerX - 150, game.world.centerY + 50, 'button1', actionOnClick, this);
