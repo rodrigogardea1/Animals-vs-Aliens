@@ -54,7 +54,7 @@
                  "properties":
                     {
                      "group":"goals",
-                     "next_level":"assets\/levels\/level1.json",
+                     "next_level":"assets\/levels\/level2.json",
                      "texture":"goal_image"
                     },
                  "propertytypes":

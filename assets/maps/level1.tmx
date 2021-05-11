@@ -1944,7 +1944,7 @@
   <object id="59" name="goal" type="goal" x="1790.44" y="221.141" width="35" height="35">
    <properties>
     <property name="group" value="goals"/>
-    <property name="next_level" value="assets/levels/level1.json"/>
+    <property name="next_level" value="assets/levels/level2.json"/>
     <property name="texture" value="goal_image"/>
    </properties>
   </object>
