@@ -18,6 +18,6 @@ demo.state2.prototype = {
 
             //the "click to restart" handler
         game.input.onTap.addOnce(function () {
-        this.game.state.start("BootState", true, false, "assets/levels/level1.json");
+        this.game.state.start("BootState", true, false, "assets/levels/level2.json");
         }
                                  )}};

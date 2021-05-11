@@ -44,7 +44,7 @@ demo.state0.prototype = {
         
         var objectiveLabel = stateText = game.add.text(535, 20, ' ', {font: '30px Arial', fill: '#F2F2F2'});
         stateText.anchor.setTo(1.1, 0.2);
-        stateText.text = " Objective 1: Get the first diamond \n Objective 2: Get the second diamond \n Objective 3: Defeat the Mothership! ";
+        stateText.text = " Objective 1: Get the first diamond \n Objective 2: Get the second diamond";
         stateText.visible = true;
 
         play_button = game.add.button(game.world.centerX - 150, game.world.centerY + 50, 'button1', actionOnClick, this);
