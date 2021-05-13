@@ -1,5 +1,5 @@
 var Platformer = Platformer || {};
-
+var reached = 0;
 Platformer.Goal = function (game_state, position, properties) {
     "use strict";
     Platformer.Prefab.call(this, game_state, position, properties);
@@ -23,7 +23,15 @@ Platformer.Goal.prototype.update = function () {
 Platformer.Goal.prototype.reach_goal = function () {
     "use strict";
     // start the next level
+    reached += 1;
     localStorage.player_lives = this.game_state.prefabs.player.lives;
     localStorage.player_score = this.game_state.prefabs.player.score;
-    this.game_state.game.state.start("state2");
+    if (reached === 1) {
+        this.game_state.game.state.start("BootState", true, false, this.next_level);
+        
+    }
+    
+    else {
+        this.game_state.game.state.start("state2");   
+    }
 };
