@@ -2,7 +2,7 @@
     "assets": {
         "map_tiles": { "type": "image", "source": "assets/images/tiles_spritesheet.png" },
         "background2": { "type": "image", "source": "assets/images/background2.png"},
-        "player2_spritesheet": { "type": "spritesheet", "source": "assets/images/player2_spritesheet.png", "frame_width": 20, "frame_height": 20, "frames": 35},
+        "player_spritesheet": { "type": "spritesheet", "source": "assets/images/player2_spritesheet.png", "frame_width": 20, "frame_height": 20, "frames": 35},
         "vampire_spritesheet": { "type": "spritesheet", "source": "assets/images/vampire_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 56},
         "robots_spritesheet": { "type": "spritesheet", "source": "assets/images/robots_spritesheet.png", "frame_width": 32, "frame_height": 32, "frames": 72 },
         "goal_image": { "type": "image", "source": "assets/images/goal.png" },
@@ -10,7 +10,7 @@
         "coin_image": { "type": "image", "source": "assets/images/coin.png" },
         "fireball_item_image": { "type": "image", "source": "assets/images/fireball.png" },
         "fireball_image": { "type": "image", "source": "assets/images/fireball.png" },
-        "life_item_image": { "type": "image", "source": "assets/images/life_item.png" },
+        "life_item_image": { "type": "image", "source": "assets/images/life_item2.png" },
         "gameover": { "type": "image", "source": "assets/images/youlost.png" },
         "youwon": { "type": "image", "source": "assets/images/youwon.png" },
         

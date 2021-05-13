@@ -2277,7 +2277,7 @@
     <property name="group" value="players"/>
     <property name="jumping_speed" value="500"/>
     <property name="lives" value="3"/>
-    <property name="texture" value="player2_spritesheet"/>
+    <property name="texture" value="player_spritesheet"/>
     <property name="walking_speed" value="200"/>
    </properties>
   </object>

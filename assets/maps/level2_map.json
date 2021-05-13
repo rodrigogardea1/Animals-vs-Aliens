@@ -838,7 +838,7 @@
                      "group":"players",
                      "jumping_speed":"500",
                      "lives":"3",
-                     "texture":"player2_spritesheet",
+                     "texture":"player_spritesheet",
                      "walking_speed":"200"
                     },
                  "propertytypes":
